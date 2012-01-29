@@ -13,5 +13,10 @@
 	dh $@ 
 
 override_dh_installdeb:
+	debian/yavdr-conffiles-helper
 	dh_installdeb
 	rm debian/yavdr-conffiles/DEBIAN/conffiles
+
+override_dh_clean:
+	rm -f debian/postinst debian/prerm
+	dh_clean

@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 set -e
-PKG=yavdr-conffiles
 
-CONFFILES=
+PKG=yavdr-conffiles
+CONFFILES="@CONFFILES@"
+
 if [ "$1" = configure ] ; then
         for f in $CONFFILES
         do
