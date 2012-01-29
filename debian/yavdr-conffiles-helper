@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for f in $(cd etc/yavdr/conffiles; find etc -type f); do
+  CONFFILES="/$f $CONFFILES"
+done
+for p in debian/postinst debian/prerm; do
+  sed -e "s|@CONFFILES@|$CONFFILES|" $p.in >$p
+done
