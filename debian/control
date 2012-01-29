@@ -1,0 +1,14 @@
+Source: yavdr-conffiles
+Section: misc
+Priority: extra
+Maintainer: Gerald Dachs <gda@dachsweb.de>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+#Vcs-Git: git://git.debian.org/collab-maint/override-test-divert.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/override-test-divert.git;a=summary
+
+Package: override-test-divert
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: conffiles that yavdr overrides
+ conffiles that yavdr overrides

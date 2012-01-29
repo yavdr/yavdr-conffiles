@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+PKG=yavdr-conffiles
+
+CONFFILES=
+if [ "$1" = configure ] ; then
+        for f in $CONFFILES
+        do
+                dpkg-divert --add --package ${PKG} --rename \
+                        --divert $f.distrib $f
+                [ \! -e $f -o -L $f ] && ln -sf /etc/yavdr/conffiles$f $f
+        done
+fi
+#DEBHELPER#
+exit 0
