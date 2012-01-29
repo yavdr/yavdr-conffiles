@@ -14,4 +14,4 @@
 #           used if the currently-running release is not itself an LTS
 #           release, since in that case the upgrader won't be able to
 #           determine if a newer release is available.
-Prompt=normal
+Prompt=never
